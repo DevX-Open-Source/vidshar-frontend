@@ -2,13 +2,13 @@ import { screen } from '@testing-library/react'
 
 import { renderWithTheme } from '../../utils/tests/helpers'
 
-import Main from '.'
+import Button from '.'
 
-describe('<Main />', () => {
+describe('<Button />', () => {
   it('should render the heading', () => {
-    const { container } = renderWithTheme(<Main />)
+    const { container } = renderWithTheme(<Button />)
 
-    expect(screen.getByRole('heading', { name: /Main/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Button/i })).toBeInTheDocument()
 
     expect(container.firstChild).toMatchSnapshot()
   })
